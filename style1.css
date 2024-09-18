@@ -1,0 +1,319 @@
+/* General Styles */
+body {
+    font-family: 'arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0; /* Light gray background */
+    color: #333; /* Dark text color */
+}
+/* Update the header styles to position the logo to the left */
+header {
+    background: #f5f9f3; /* Green background */
+    color: #f5f9f3;
+    padding: 20px;
+    text-align: center; /* Align text to the left */
+    display: flex;
+    align-items: center; /* Align items vertically */
+    gap: 15px; /* Space between the logo and text */
+    flex-direction: row; /* Align items in a row */
+    position: relative;
+}
+
+
+header img {
+    width: 150px; /* Set the logo width */
+    height: auto; /* Maintain aspect ratio */
+    margin-bottom: 10px; /* Space between logo and heading */
+}
+
+header .text-container {
+    font-family: 'Papyrus', sans-serif;
+    display: flex;
+    flex-direction: column; /* Stack text vertically */
+    justify-content: right; /* Center text vertically within its container */
+}
+
+header h1, header p {
+    margin: 0; /* Remove default margins */
+}
+header h1 {
+    color: #96ac64; /* Ensure text is readable against the dark background */
+    font-size: 3rem;
+    margin: 0;
+}
+
+header p {
+    color: #96ac64; /* Ensure text is readable against the dark background */
+    font-size: 1.2rem;
+    margin: 0;
+}
+
+/* Styling the 'Our Vision' section */
+.vision-section {
+    background-color: #ffffff; /* White background */
+    padding: 30px;
+    margin: 20px auto;
+    width: 90%;
+    max-width: 1200px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+section {
+    padding: 30px;
+    margin: 20px auto;
+    width: 90%;
+    max-width: 1200px;
+    background-color: rgb(212, 220, 190); /* Background color for sections */
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+h2 {
+    color: #95ac65; /* Green section headings */
+    margin-bottom: 20px;
+    font-size: 2rem;
+}
+
+p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+/* Flexbox container for side-by-side layout */
+.content-sections {
+    display: flex;
+    flex-wrap: wrap; /* Allow items to wrap */
+    justify-content: space-between;
+    gap: 20px; /* Space between the sections */
+}
+
+/* Each column (energy-types and benefits) */
+.energy-types, .benefits {
+    width: 48%; /* Side-by-side layout with margin */
+    display: flex;
+    flex-direction: column; /* Stack the inner boxes vertically */
+    gap: 20px; /* Space between the inner boxes */
+}
+
+/* Styling for the individual divs inside energy-types and benefits */
+.energy-types div, .benefits div {
+    padding: 20px;
+    background-color: #f9f9f9; /* Light gray background */
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.05); /* Subtle shadow */
+    flex-grow: 1; /* Ensure boxes grow to the same height */
+}
+
+.energy-types h3, .benefits h3 {
+    color: #218838; /* Dark green for subheadings */
+}
+
+.energy-types p, .benefits p {
+    font-size: 1rem;
+}
+/* Slider Section Styles */
+<!--.slider-section {
+    background-color: #ffffff; /* Background color for the slider section */
+    padding: 30px;
+    margin: 20px auto;
+    width: 90%;
+    max-width: 1200px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    position: relative;
+}-->
+/* Slider Section Styles */
+.slider-section {
+    background-color: #ffffff; /* Background color for the slider section */
+    padding: 30px;
+    margin: 20px auto;
+    width: 90%; /* Responsive width */
+    max-width: 1200px; /* Maximum width */
+    height: 400px; /* Fixed height or adjust as needed */
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    position: relative;
+    overflow: hidden; /* Hide overflow for neat appearance */
+}
+
+/* Slider Styles */
+.slider {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    height: 100%;
+}
+
+.slides {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    width: 100%;
+    height: 100%; /* Ensure the slider covers the full height */
+}
+
+.slide {
+    min-width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center; /* Center the image horizontally */
+    align-items: center; /* Center the image vertically */
+}
+
+.slide img {
+    width: auto; /* Maintain the aspect ratio */
+    height: 100%; /* Make the image fit the height of the slider */
+    max-width: 100%; /* Ensure the image doesn't exceed the container width */
+    object-fit: cover; /* Cover the slider area without distortion */
+    border-radius: 10px;
+}
+
+/* Arrow Styles */
+.arrow {
+    position: absolute;
+    top: 50%; /* Center vertically */
+    transform: translateY(-50%); /* Adjust vertical centering */
+    background-color: transparent; /* Transparent background to remove any unwanted color */
+    color: #f5f9f3;
+    border: none; /* Remove any border */
+    outline: none; /* Remove any default outline */
+    font-size: 2rem; /* Adjust size of arrow */
+    cursor: pointer;
+    padding: 0; /* Remove padding to eliminate extra space */
+    border-radius: 0; /* No border radius */
+    z-index: 10;
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transition for background color and scaling */
+}
+
+.arrow:hover {
+    background-color: rgba(152, 170, 100, 0.7); /* Highlighted background color */
+    transform: scale(1.1); /* Slightly enlarge arrow on hover */
+}
+
+.left-arrow {
+    left: 10px;
+}
+
+.right-arrow {
+    right: 10px;
+}
+
+/* Dot Styles */
+.dots {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.dot {
+    display: inline-block;
+    background-color: #bbb;
+    border-radius: 50%;
+    height: 10px;
+    width: 10px;
+    margin: 0 5px;
+    cursor: pointer;
+    transition: background-color 0.5s ease; /* Smooth dot color transition */
+}
+
+.dot.active {
+    background-color: #525c46;
+}
+/* Scrolling Banner Styles */
+.scrolling-banner {
+    width: 100%;
+    overflow: hidden; /* Hide overflow */
+    background-color: #333; /* Background color for visibility */
+    color: white; /* Text color */
+    padding: 10px 0; /* Padding for space around text */
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1); /* Optional shadow for better visibility */
+}
+
+.scrolling-text {
+    display: flex; /* Arrange text in a horizontal row */
+    white-space: nowrap; /* Prevent text from wrapping to the next line */
+    animation: scroll-left 10s linear infinite; /* Animation for scrolling effect */
+}
+
+.scrolling-text p {
+    margin: 0 2rem; /* Space between phrases */
+    font-size: 1.2rem; /* Font size for readability */
+}
+
+/* Keyframes for Scrolling Animation */
+@keyframes scroll-left {
+    0% {
+        transform: translateX(100%); /* Start position (off-screen) */
+    }
+    100% {
+        transform: translateX(-100%); /* End position (off-screen) */
+    }
+}
+/* Responsive Design */
+
+/* For tablets and smaller devices (up to 1024px) */
+@media (max-width: 1024px) {
+    .content-sections {
+        flex-direction: column; /* Stack sections vertically */
+    }
+}
+
+/* For mobile devices (up to 768px) */
+@media (max-width: 768px) {
+    header img {
+        width: 120px; /* Scale down the logo */
+    }
+
+    header h1 {
+        font-size: 2.5rem; /* Scale down the main heading */
+    }
+
+    header p {
+        font-size: 1rem; /* Scale down the subheading */
+    }
+
+    .energy-types, .benefits {
+        width: 100%; /* Full width for small screens */
+        padding: 15px; /* Reduce padding */
+    }
+
+    h2 {
+        font-size: 1.8rem; /* Adjust heading size */
+    }
+
+    p {
+        font-size: 1rem; /* Adjust paragraph size */
+    }
+}
+
+/* For very small phones (up to 600px) */
+@media (max-width: 600px) {
+    header {
+        flex-direction: column; /* Stack logo and text vertically */
+        gap: 10px; /* Reduce gap */
+    }
+
+    header img {
+        width: 80px; /* Further reduce logo size */
+    }
+
+    header h1 {
+        font-size: 1.5rem; /* Smaller main heading */
+    }
+
+    header p {
+        font-size: 0.9rem; /* Smaller subheading */
+    }
+
+    h2 {
+        font-size: 1.5rem; /* Adjust section heading size */
+    }
+
+    .content-sections {
+        flex-direction: column; /* Stack sections vertically */
+    }
+
+    .energy-types, .benefits {
+        width: 100%; /* Full width */
+        padding: 10px; /* Reduce padding further */
+    }
+}

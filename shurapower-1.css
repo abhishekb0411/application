@@ -1,0 +1,16 @@
+@charset "utf-8";
+	.image
+{
+	background-image : url(image.png);
+	background-repeat : no-repeat;
+}
+.logo
+{
+	background-image : url(logo.png);
+	background-repeat : no-repeat;
+}
+.st0
+{
+	background : #F3F6F0;
+	background : rgba(243, 246, 240, 1);
+}
