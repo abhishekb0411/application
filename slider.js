@@ -48,3 +48,20 @@ showSlides(slideIndex);
 
 // Auto-slide functionality
 setInterval(nextSlide, autoSlideInterval);
+// script.js
+document.addEventListener("DOMContentLoaded", function() {
+    const preloader = document.querySelector('.preloader');
+    
+    // Function to hide the preloader after a delay
+    function hidePreloader() {
+        setTimeout(() => {
+            preloader.style.opacity = '0';
+            setTimeout(() => {
+                preloader.style.display = 'none';
+            }, 500); // Matches the fade-out duration
+        }, 5000); // Show preloader for 5 seconds
+    }
+
+    // Ensure the preloader is hidden once the page has fully loaded
+    window.addEventListener('load', hidePreloader);
+});
