@@ -6,46 +6,47 @@ body {
     background-color: #f0f0f0; /* Light gray background */
     color: #333; /* Dark text color */
 }
-/* Update the header styles to position the logo to the left */
+/* Header Styles */
 header {
-    background: #f5f9f3; /* Green background */
-    color: #f5f9f3;
+    background: #f5f9f3; /* Light background color */
+    color: #333; /* Dark text color for readability */
     padding: 20px;
-    text-align: center; /* Align text to the left */
     display: flex;
     align-items: center; /* Align items vertically */
-    gap: 15px; /* Space between the logo and text */
-    flex-direction: row; /* Align items in a row */
+    justify-content: space-between; /* Keep logo on the left, text in center */
+    height: 220px; /* Fixed height for the header */
+    box-sizing: border-box; /* Include padding in the height */
     position: relative;
 }
 
-
+/* Logo Styles */
 header img {
-    width: 150px; /* Set the logo width */
+    width: 120px; /* Adjust the logo width to ensure it fits */
     height: auto; /* Maintain aspect ratio */
-    margin-bottom: 10px; /* Space between logo and heading */
+    margin-right: 20px; /* Space between logo and text */
+    object-fit: contain; /* Ensure the image is contained within the header */
 }
 
+/* Text Container Styles */
 header .text-container {
-    font-family: 'Papyrus', sans-serif;
-    display: flex;
-    flex-direction: column; /* Stack text vertically */
-    justify-content: right; /* Center text vertically within its container */
+    text-align: center; /* Center the text */
+    flex-grow: 1; /* Ensure text container grows and centers the text */
 }
 
+/* Text Styles */
 header h1, header p {
     margin: 0; /* Remove default margins */
 }
+
 header h1 {
-    color: #96ac64; /* Ensure text is readable against the dark background */
-    font-size: 3rem;
-    margin: 0;
+    color: #96ac64; /* Text color */
+    font-size: 2.5rem; /* Adjusted font size */
 }
 
 header p {
-    color: #96ac64; /* Ensure text is readable against the dark background */
-    font-size: 1.2rem;
-    margin: 0;
+    color: #96ac64; /* Text color */
+    font-size: 1.2rem; /* Adjusted font size */
+    margin-top: 5px; /* Add small margin between lines */
 }
 
 /* Styling the 'Our Vision' section */
@@ -218,25 +219,30 @@ p {
 .dot.active {
     background-color: #525c46;
 }
-/* Scrolling Banner Styles */
+/* Updated Scrolling Banner Styles */
 .scrolling-banner {
     width: 100%;
     overflow: hidden; /* Hide overflow */
-    background-color: #333; /* Background color for visibility */
-    color: white; /* Text color */
-    padding: 10px 0; /* Padding for space around text */
-    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1); /* Optional shadow for better visibility */
+    background-color: #222; /* Dark background for high contrast */
+    color: #f9f9f9; /* Light text color */
+    padding: 20px 0; /* Padding for space around text */
+    border: 1px solid #555; /* Subtle border for separation */
+    border-radius: 8px; /* Rounded corners for a modern look */
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.5); /* Stronger shadow for depth */
+    font-family: 'Roboto', sans-serif; /* Modern, clean font */
 }
 
 .scrolling-text {
     display: flex; /* Arrange text in a horizontal row */
     white-space: nowrap; /* Prevent text from wrapping to the next line */
-    animation: scroll-left 10s linear infinite; /* Animation for scrolling effect */
+    animation: scroll-left 15s linear infinite; /* Slower animation for a smoother effect */
 }
 
-.scrolling-text p {
-    margin: 0 2rem; /* Space between phrases */
+.scrolling-text span {
+    padding-right: 50px; /* Space between phrases */
     font-size: 1.2rem; /* Font size for readability */
+    display: inline-block; /* Ensure phrases are displayed inline */
+    font-weight: bold; /* Bold text for emphasis */
 }
 
 /* Keyframes for Scrolling Animation */
@@ -316,4 +322,130 @@ p {
         width: 100%; /* Full width */
         padding: 10px; /* Reduce padding further */
     }
+}
+/* Footer Styles */
+footer {
+    padding: 20px 0;
+    font-size: 0.9rem;
+    background-color: #333; /* Footer background color */
+    color: white; /* Footer text color */
+}
+
+.footer-content {
+    display: flex;
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+    justify-content: space-between;
+    padding: 0 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-left, .footer-center, .footer-right {
+    flex: 1;
+    margin: 0 10px;
+    min-width: 200px; /* Minimum width for responsiveness */
+}
+
+/* Media Queries */
+
+/* Tablets and below */
+@media (max-width: 1024px) {
+    .energy-types, .benefits {
+        width: 100%;
+    }
+}
+
+/* Mobile devices */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    header img {
+        width: 100px; /* Smaller logo on mobile */
+        margin-bottom: 10px;
+    }
+
+    header h1 {
+        font-size: 2rem;
+    }
+
+    header p {
+        font-size: 0.9rem;
+    }
+
+    .content-sections {
+        flex-direction: column;
+    }
+}
+
+/* Small screens */
+@media (max-width: 600px) {
+    header h1 {
+        font-size: 1.8rem; /* Further reduced font size */
+    }
+
+    header p {
+        font-size: 0.8rem; /* Further reduced font size */
+    }
+
+    .scrolling-text span {
+        font-size: 1rem; /* Adjust font size for mobile */
+    }
+}
+
+/* Footer Styles */
+footer {
+    background-color: #333;
+    color: white;
+    padding: 20px 0;
+    font-size: 0.9rem;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-left, .footer-center, .footer-right {
+    flex: 1;
+    margin: 0 10px;
+}
+
+.footer-left h4, .footer-center h4, .footer-right h4 {
+    margin-bottom: 10px;
+    font-size: 1.1rem;
+}
+
+.footer-left p, .footer-right p {
+    margin: 5px 0;
+}
+
+.social-media {
+    display: flex;
+    gap: 10px;
+}
+
+.social-media a {
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+.social-media a:hover {
+    text-decoration: underline;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding: 10px 0;
+    background-color: #222;
+}
+
+.footer-bottom p {
+    margin: 0;
 }
