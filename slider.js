@@ -59,7 +59,7 @@ document.addEventListener("DOMContentLoaded", function() {
             setTimeout(() => {
                 preloader.style.display = 'none';
             }, 500); // Matches the fade-out duration
-        }, 5000); // Show preloader for 5 seconds
+        }, 1500); // Show preloader for 5 seconds
     }
 
     // Ensure the preloader is hidden once the page has fully loaded

@@ -408,25 +408,32 @@ footer {
 .footer-bottom p {
     margin: 0;
 }
+
+/* Prevent horizontal scrolling */
+html, body {
+    overflow-x: hidden;
+}
+
 /* Responsive Design */
 
 /* For tablets and smaller devices (up to 1024px) */
 @media (max-width: 1024px) {
     header {
-        flex-direction: column; /* Stack logo and text vertically */
-        align-items: center; /* Center align items */
+        flex-direction: row; /* Keep logo and text side by side */
+        justify-content: space-between; /* Adjust space between elements */
+        align-items: center; /* Vertically center-align */
     }
 
     header img {
-        width: 100px; /* Scale down the logo */
+        width: 80px; /* Adjust logo size */
     }
 
     header h1 {
-        font-size: 2rem; /* Scale down the main heading */
+        font-size: 1.8rem; /* Adjust heading size */
     }
 
     header p {
-        font-size: 1rem; /* Scale down the subheading */
+        font-size: 0.9rem; /* Adjust subheading size */
     }
 
     .content-sections {
@@ -451,54 +458,61 @@ footer {
 /* For mobile devices (up to 768px) */
 @media (max-width: 768px) {
     header {
-        padding: 20px; /* Adjust padding for mobile */
+        flex-direction: row; /* Keep logo and text side by side */
+        justify-content: space-between;
+        padding: 20px;
     }
 
     header img {
-        width: 80px; /* Further reduce logo size */
+        width: 70px; /* Adjust logo size */
     }
 
     header h1 {
-        font-size: 1.5rem; /* Smaller main heading */
+        font-size: 1.5rem; /* Adjust heading size */
     }
 
     header p {
-        font-size: 0.9rem; /* Smaller subheading */
+        font-size: 0.9rem; /* Adjust subheading size */
     }
 
     .who-are-we, .people-philosophy {
-        padding: 20px; /* Reduce padding in sections */
+        padding: 20px;
     }
 
     h2 {
-        font-size: 1.5rem; /* Adjust section heading size */
+        font-size: 1.5rem;
     }
 
     .energy-types, .benefits {
-        padding: 10px; /* Reduce padding further */
+        padding: 10px;
     }
 }
 
 /* For very small phones (up to 600px) */
 @media (max-width: 600px) {
     header {
-        flex-direction: column; /* Stack logo and text vertically */
-        gap: 10px; /* Reduce gap */
+        flex-direction: row; /* Keep logo and text side by side */
+        justify-content: space-between;
+        gap: 10px;
+    }
+
+    header img {
+        width: 60px;
     }
 
     header h1 {
-        font-size: 1.3rem; /* Further reduced font size */
+        font-size: 1.3rem;
     }
 
     header p {
-        font-size: 0.8rem; /* Further reduced font size */
+        font-size: 0.8rem;
     }
 
     .scrolling-text span {
-        font-size: 0.9rem; /* Adjust font size for mobile */
+        font-size: 0.9rem;
     }
 
     .who-are-we, .people-philosophy {
-        padding: 15px; /* Further reduce padding */
+        padding: 15px;
     }
 }
