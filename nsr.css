@@ -1,0 +1,297 @@
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+/* remove scroolbar */
+body::-webkit-scrollbar {
+    display: none;
+}
+nav{
+    background: #f5f9f3;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    color: #96ac64;
+    height: 10dvh;
+    width: 100%;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+.logo-main{
+    width: auto;
+    height: 100%;
+    margin-left: 20px;
+    padding: 1dvh
+}
+.text-container{
+    font-family: 'arial', sans-serif;
+    text-align: center;
+    padding-right:5dvh ;
+    width: 100%;
+}
+.text-container h1{
+    font-size: 2.3rem;
+}
+.text-container p{
+    font-size: 1rem;
+}
+.vision-section{
+    background-color: #ffffff; /* White background */
+    padding: 30px;
+    margin: 20px auto;
+    width: 90%;
+    max-width: 1200px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+.vision-section h2{
+    color: #96ac64; /* Green section headings */
+    margin-bottom: 20px;
+    font-size: 1.8rem;
+}
+.vision-section p{
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+.slider-section {
+    background-color: #ffffff; /* White background */
+    padding: 30px;
+    margin: 20px auto;
+    width: 90%;
+    max-width: 1200px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    position: relative;
+}
+.slider {
+    max-width: 100%;
+    margin: 30px auto;
+    border-radius: 10px;
+}
+.slides {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    width: 100%;
+    height: 100%; /* Ensure the slider covers the full height */
+    overflow: hidden;
+}   
+.slide {
+    min-width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center; /* Center the image horizontally */
+    align-items: center; /* Center the image vertically */
+}
+.slide img {
+    width: auto; /* Maintain the aspect ratio */
+    height: 100%; /* Make the image fit the height of the slider */
+    max-width: 100%; /* Ensure the image doesn't exceed the container width */
+    object-fit: cover; /* Cover the slider area without distortion */
+    border-radius: 10px;
+}
+.left-arrow, .right-arrow {
+    position: absolute;
+    top: 50%; /* Center vertically */
+    transform: translateY(-50%); /* Adjust vertical centering */
+    background-color: transparent; /* Transparent background to remove any unwanted color */
+    color: #5e5e5e;
+    border: none; /* Remove any border */
+    outline: none; /* Remove any default outline */
+    font-size: 2rem; /* Adjust size of arrow */
+    cursor: pointer;
+    padding: 0; /* Remove padding to eliminate extra space */
+    border-radius: 0; /* No border radius */
+    z-index: 10;
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transition for background color and scaling */
+}
+.left-arrow {
+    left: 0;
+}
+.right-arrow {
+    right: 0;
+}
+.dots {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+.dot {
+    width: 0.6rem;
+    height: 0.6rem;
+    background-color: #96ac64;
+    border-radius: 50%;
+    margin: 0 5px;
+    cursor: pointer;
+} 
+.dot.active {
+    background-color: #5e5e5e;
+}
+.content-sections{
+    padding: 30px;
+    margin: 20px auto;
+    width: 90%;
+    max-width: 1200px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    background-color: #dfe6cc;
+}
+.energy-types, .benefits{
+    /* padding: 30px; */
+    margin: 20px auto;
+    width: 90%;
+    max-width: 1200px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: row;
+    gap: 20px; 
+    background-color: transparent; /* Light gray background for each block */
+}
+.energy-types div{
+    padding : 20px;
+    background-color: #ffffff; /* Light gray background for each block */
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.05); /* Subtle shadow */
+    flex-grow: 1; /* Ensure boxes grow to the same height */
+    flex-basis: 0; /* ensure boxes grow to the same width */
+}
+.benefits div{
+    padding: 20px;
+    background-color: #ffffff; /* Light gray background for each block */
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.05); /* Subtle shadow */
+    flex-grow: 1; /* Ensure boxes grow to the same height */
+    flex-basis: 0; /* ensure boxes grow to the same width */
+}
+
+.energy-types h3, .benefits h3{
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+    color: #218838; /* Slightly darker green for subheadings */
+}
+
+.energy-types p, .benefits p{
+    font-size: 1.1rem;
+    line-height: 1.3;
+}
+
+.who-are-we{
+    padding: 30px;
+    margin: 20px auto;
+    width: 90%;
+    max-width: 1200px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    background-color: #ffffff;
+}
+.who-are-we h3, .our-philosophy h3{
+    font-size: 1.8rem;
+    color: #96ac64;
+    margin-bottom: 20px;
+}   
+.who-are-we p, .our-philosophy p{
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+.our-philosophy{
+    padding: 30px;
+    margin: 20px auto;
+    width: 90%;
+    max-width: 1200px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    background-color: #ffffff;
+}
+
+.scrolling-banner {
+    width: 100%;
+    overflow: hidden; /* Hide overflow */
+    background-color: #222; /* Dark background for high contrast */
+    color: #f9f9f9; /* Light text color */
+    padding: 10px 0; /* Padding for space around text */
+    border: 1px solid #555; /* Subtle border for separation */
+    border-radius: 0px; /* Rounded corners for a modern look */
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.5); /* Stronger shadow for depth */
+    font-family: 'Roboto', sans-serif; /* Modern, clean font */
+}
+.scrolling-text {
+    display: flex; /* Arrange text in a horizontal row */
+    white-space: nowrap; /* Prevent text from wrapping to the next line */
+    animation: scroll-left 15s linear infinite; /* Slower animation for a smoother effect */
+}
+.scrolling-text span {
+    padding-right: 50px; /* Space between phrases */
+    font-size: 1rem; /* Font size for readability */
+    display: inline-block; /* Ensure phrases are displayed inline */
+    font-weight: bold; /* Bold text for emphasis */
+}
+
+/* Keyframes for Scrolling Animation */
+@keyframes scroll-left {
+    0% {
+        transform: translateX(100%); /* Start position (off-screen) */
+    }
+    100% {
+        transform: translateX(-100%); /* End position (off-screen) */
+    }
+}
+ 
+.footer-content{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: first baseline;
+    padding: 20px;
+    background-color: #222;
+    color: #fff;
+    padding: 2dvw 1.5dvw 1dvw 1.5dvw;
+}
+.footer-left{
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-left: 10dvw;
+}
+
+.footer-right{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-start;
+    margin-right: 10dvw;
+}
+
+.footer-left p, .footer-right div a{
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 10px;
+}
+
+.footer-left h4, .footer-right h4{  
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #218838; /* Slightly darker green for subheadings */
+    font-weight: bold; /* bold */
+}
+.footer-right div{
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    
+}
+.footer-right div a{
+    text-decoration: none; /* remove default anchor styling */
+    color: #fff;
+}
+.footer-bottom{
+    text-align: center;
+    padding: 10px 0;
+    background-color: #222;
+    color: #fff;
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
