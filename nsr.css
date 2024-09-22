@@ -338,5 +338,11 @@ nav{
     .footer-left h4, .footer-right h4 {
         font-size: 1.2rem;
     }
+    .footer-left  {
+        margin-left: 10px;
+    }
+    .footer-right {
+        margin-right: 10px;
+    }
     
 }
