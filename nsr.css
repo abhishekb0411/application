@@ -331,3 +331,12 @@ nav{
         font-size: 0.7rem;
     }
 }
+@media screen and (max-width: 480px) {
+    .footer-left p, .footer-right div a {
+        font-size: 0.7rem;
+    }
+    .footer-left h4, .footer-right h4 {
+        font-size: 1.2rem;
+    }
+    
+}
