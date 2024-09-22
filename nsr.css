@@ -295,3 +295,39 @@ nav{
     font-size: 1.1rem;
     line-height: 1.6;
 }
+/* media query*/
+@media screen and (max-width: 768px) {
+    .text-container h1 {    
+        font-size: 2rem;
+    }
+    .text-container p {
+        font-size: 0.7rem;
+    }
+    .vision-section h2, .who-are-we h3, .our-philosophy h3 {
+        font-size: 1.7rem;
+    }
+    .vision-section p, .who-are-we p, .our-philosophy p {
+        font-size: 0.9rem;
+    }
+    .energy-types, .benefits {
+        display: block ;
+    }
+    .energy-types div, .benefits div {
+        margin-bottom: 20px;
+    }
+    .energy-types h3, .benefits h3 {
+        font-size: 1.5rem;
+    }
+    .energy-types p, .benefits p {
+        font-size: 0.9rem;
+    }
+    .footer-left p, .footer-right div a {
+        font-size: 0.9rem;
+    }
+    .footer-left h4, .footer-right h4 {
+        font-size: 1.5rem;
+    }
+    .footer-bottom {
+        font-size: 0.7rem;
+    }
+}
