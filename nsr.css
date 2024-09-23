@@ -277,6 +277,11 @@ nav{
     color: #218838; /* Slightly darker green for subheadings */
     font-weight: bold; /* bold */
 }
+.footer-left img{
+    width: auto;
+    height: 5dvh;
+    padding: 0 0 10px 0;
+}
 .footer-right div{
     display: flex;
     flex-direction: column;
