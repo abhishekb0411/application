@@ -8,6 +8,9 @@
 body::-webkit-scrollbar {
     display: none;
 }
+body{
+    font-family: 'arial', sans-serif;
+}
 nav{
     background: #f5f9f3;
     display: flex;
