@@ -268,6 +268,11 @@ nav{
     margin-right: 10dvw;
 }
 
+.gmail, .phone{
+    text-decoration-line: underline;
+    color: #ffffff;
+}
+
 .footer-left p, .footer-right div a{
     font-size: 1.1rem;
     line-height: 1.6;
@@ -300,7 +305,7 @@ nav{
     padding: 10px 0;
     background-color: #222;
     color: #fff;
-    font-size: 1.1rem;
+    font-size: 0.9rem;
     line-height: 1.6;
 }
 /* media query*/
@@ -352,5 +357,9 @@ nav{
     .footer-right {
         margin-right: 10px;
     }
+    .footer-bottom {
+        font-size: 0.6rem;
+    }
     
 }
+
